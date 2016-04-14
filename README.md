@@ -98,3 +98,7 @@ In case you choose to call all your background workers `*-worker.js`, feel free 
   loaders: 'worker!kea-parallel'
 },
 ```
+
+## Caveats
+
+Currently there is no thread pooling. Spawning a lot of workers is still untested.
