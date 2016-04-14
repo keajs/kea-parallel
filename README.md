@@ -30,7 +30,7 @@ export function worker (input) {
 ```js
 // in ./saga.js
 import { runInParallel } from 'kea-parallel'
-import worker from 'worker!kea-parallel!./long-worker'
+import longWorker from 'worker!kea-parallel!./long-worker'
 
 export default function * saga () {
   console.log('Starting saga')
@@ -41,7 +41,7 @@ export default function * saga () {
   const end = new Date().getTime()
   const time = end - start
   console.log(result)
-  console.log('Execution time: ' + time)
+  console.log(`Execution time: ${time / 1000} sec`)
 }
 ```
 
@@ -51,10 +51,10 @@ This outputs:
 Starting saga
 In long worker Object {count: 1000000000}
 Object {status: "done", result: 1000000000}
-Execution time: 8463
+Execution time: 8.892 sec
 ```
 
-...while the entire app remains responsive (not blocked by the huge for loop)
+...while the entire app remains responsive (not blocked by the huge `for` loop)
 
 In case you choose to call all your background workers `*-worker.js`, feel free to add this to your webpack config, above the line with babel-loader:
 
