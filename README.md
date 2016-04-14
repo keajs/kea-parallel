@@ -2,7 +2,7 @@
 
 Run big operations in the background.
 
-Use in combination with `kea-parallel` and `redux-saga`
+Use in combination with `kea-parallel-loader`, `worker-loader` and possibly also `redux-saga`
 
 To init:
 
