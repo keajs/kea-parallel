@@ -1,0 +1,22 @@
+{
+  "name": "kea-parallel",
+  "version": "0.1.0",
+  "description": "create webpack web worker exports from plain functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariusandra/kea-parallel.git"
+  },
+  "author": "Marius Andra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mariusandra/kea-parallel/issues"
+  },
+  "homepage": "https://github.com/mariusandra/kea-parallel#readme",
+  "peerDependencies": {
+    "worker-loader": "*"
+  }
+}
